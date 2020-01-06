@@ -1,0 +1,23 @@
+{
+  "name": "npm-dist-tag",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "npm-dist-tag": "bin/npm-dist-tag.js"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^4.0.0",
+    "node-fetch": "^2.6.0",
+    "semver": "^7.1.0"
+  },
+  "engines": {
+    "node": ">= 10.0.0"
+  }
+}

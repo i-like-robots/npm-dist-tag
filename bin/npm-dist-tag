@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+const program = require('commander')
+const getDistTag = require('../')
+
+const command = program
+  .option('-p, --package <name>', 'The name of the npm package, defaults to pkg.name')
+  .option('-v, --version <semver>', 'The new version for the package, defaults to pkg.version')
+  .parse(process.argv)
+
+getDistTag(command.opts())
+  .then((result) => {
+    console.log(result)
+    process.exit(0)
+  })
+  .catch((error) => {
+    console.error(error.toString())
+    process.exit(1)
+  })
