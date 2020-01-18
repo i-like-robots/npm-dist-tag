@@ -7,7 +7,8 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "prettier --config .prettierrc.json --list-different lib/*.js",
+    "test": "npm run lint && echo 'no tests defined yet'"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,8 @@
   },
   "engines": {
     "node": ">= 10.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
   }
 }
