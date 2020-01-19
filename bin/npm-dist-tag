@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const mri = require('mri')
-const getDistTag = require('../')
+const npmDistTag = require('../')
 
 const help = `
 Usage: npm-dist-tag [options]
@@ -28,7 +28,7 @@ const run = async () => {
       }
     })
 
-    const result = options.help ? help : await getDistTag(options)
+    const result = options.help ? help : await npmDistTag(options)
 
     console.log(result)
     process.exit(0)

@@ -28,28 +28,45 @@ $ npm install --save-dev npm-dist-tag
 
 ## Usage
 
-This tool fetches data about a package from the npm registry and compares its new version with those already published. By default the package name and new version will be loaded from `package.json` in the current working directory.
+This tool fetches data about a package from the npm registry and compares its new version with those already published. By default the package name and new version will be loaded from `package.json` in the current working directory. The tool can be used via its command line interface or Node.js API and will return one of three values:
 
-The command will output a string to `stdout`, one of:
+  - `"latest"` if the new version is greater than the highest version on the registry.
 
-  - "latest" if the new version is greater than the highest version on the registry.
+  - `"maintenance"` if the new version is older than the highest version on the registry.
 
-  - "maintenance" if the new version is older than the highest version on the registry.
+  - `"pre-release"` if the new version has a pre-release identifier.
 
-  - "pre-release" if the new version has a pre-release identifier.
 
-If the command fails (such as when the request to the npm registry receives an invalid response or the new version already exists) it will exit with a non-zero code and write the error message to `stderr`.
+### Command line interface
 
-The package name and version can also be provided as options:
+When the command runs successfully it will write the distribution tag to `stdout`. If the command fails it will exit with a non-zero code and write the error message to `stderr`.
+
+The package name and version can be provided to the tool as options:
 
 ```sh
-$ npx npm-dist-tag --package <name> --version <semver>
+$ npx npm-dist-tag --package "<name>" --version "<semver>"
 ```
 
-For full usage information run the command with the `--help` flag:
 
-```sh
-$ npx npm-dist-tag --help
+### Node interface
+
+This package provides one function which returns a promise. The promise will either resolve with the distribution tag when successful or reject with an error if it fails:
+
+The `package` name and new `version` can be provided as options:
+
+```js
+const npmDistTag = require('npm-dist-tag')
+
+npmDistTag({
+  package: '<name>',
+  version: '<semver>'
+})
+  .then((tag) => {
+    console.log(tag)
+  })
+  .catch((error) => {
+    console.error(error)
+  })
 ```
 
 
