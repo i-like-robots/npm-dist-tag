@@ -10,18 +10,23 @@
     "lint": "prettier --config .prettierrc.json --list-different lib/*.js",
     "test": "npm run lint && echo 'no tests defined yet'"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["npm", "dist-tag", "publish"],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:i-like-robots/npm-dist-tag.git"
+  },
+  "homepage": "https://github.com/i-like-robots/npm-dist-tag",
+  "author": "Matt Hinchliffe",
   "license": "ISC",
   "dependencies": {
     "mri": "^1.1.4",
     "node-fetch": "^2.6.0",
     "semver": "^7.1.0"
   },
-  "engines": {
-    "node": ">= 10.0.0"
-  },
   "devDependencies": {
     "prettier": "^1.19.1"
+  },
+  "engines": {
+    "node": ">= 10.0.0"
   }
 }
