@@ -8,9 +8,14 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "prettier --config .prettierrc.json --list-different lib/*.js",
-    "test": "npm run lint && echo 'no tests defined yet'"
+    "spec": "jasmine 'test/*.spec.js'",
+    "test": "npm run lint && npm run spec"
   },
-  "keywords": ["npm", "dist-tag", "publish"],
+  "keywords": [
+    "npm",
+    "dist-tag",
+    "publish"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:i-like-robots/npm-dist-tag.git"
@@ -24,6 +29,7 @@
     "semver": "^7.1.0"
   },
   "devDependencies": {
+    "jasmine": "^3.5.0",
     "prettier": "^1.19.1"
   },
   "engines": {
