@@ -1,6 +1,6 @@
 {
   "name": "npm-dist-tag",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A tool to find the appropriate npm distribution tag when publishing a new version of your package.",
   "bin": {
     "npm-dist-tag": "bin/npm-dist-tag.js"
