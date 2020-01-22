@@ -8,7 +8,7 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "prettier --config .prettierrc.json --list-different lib/*.js",
-    "spec": "jasmine 'test/*.spec.js'",
+    "spec": "jasmine 'tests/*.spec.js'",
     "test": "npm run lint && npm run spec"
   },
   "keywords": [
