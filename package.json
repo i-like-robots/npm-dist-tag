@@ -26,7 +26,7 @@
   "dependencies": {
     "mri": "^1.1.4",
     "node-fetch": "^2.6.0",
-    "semver": "^7.1.0"
+    "semver": "^7.3.2"
   },
   "devDependencies": {
     "jasmine": "^3.5.0",
