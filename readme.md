@@ -1,6 +1,6 @@
 # npm-dist-tag
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/i-like-robots/npm-dist-tag/blob/master/LICENSE) [![Build Status](https://travis-ci.org/i-like-robots/npm-dist-tag.svg?branch=master)](https://travis-ci.org/i-like-robots/npm-dist-tag) [![npm version](https://img.shields.io/npm/v/npm-dist-tag.svg?style=flat)](https://www.npmjs.com/package/npm-dist-tag)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/i-like-robots/npm-dist-tag/blob/main/LICENSE) [![Build Status](https://travis-ci.org/i-like-robots/npm-dist-tag.svg?branch=main)](https://travis-ci.org/i-like-robots/npm-dist-tag) [![npm version](https://img.shields.io/npm/v/npm-dist-tag.svg?style=flat)](https://www.npmjs.com/package/npm-dist-tag)
 
 A small tool to find the appropriate [npm distribution tag][1] when publishing a new version of your package.
 
