@@ -30,8 +30,6 @@ const run = async () => {
       },
     })
 
-    console.log(values)
-
     const result = values.help ? help : await npmDistTag(values)
 
     console.log(result)

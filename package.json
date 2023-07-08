@@ -27,7 +27,6 @@
   "author": "Matt Hinchliffe",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^2.6.0",
     "semver": "^7.1.0"
   },
   "devDependencies": {
