@@ -1,3 +1,5 @@
+const { describe, it } = require('node:test')
+const assert = require('node:assert')
 const subject = require('../lib/getHighestVersion')
 
 const registryData = {
@@ -29,6 +31,6 @@ const registryData = {
 describe('lib/getHighestVersion', () => {
   it('returns the highest non-rerelease version', () => {
     const result = subject(registryData)
-    expect(result).toBe('5.3.2')
+    assert.equal(result, '5.3.2')
   })
 })
