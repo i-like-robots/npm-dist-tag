@@ -13,7 +13,12 @@ describe('lib/getDistTag', () => {
   describe('with lower version', () => {
     it('returns "maintenance" tag', () => {
       const result = subject('1.0.1', '2.0.0')
-      assert.equal(result, 'maintenance')
+      assert.match(result, /maintenance/)
+    })
+
+    it('prefixes "maintenance" tag with major version', () => {
+      const result = subject('1.0.1', '2.0.0')
+      assert.match(result, /v1-/)
     })
   })
 

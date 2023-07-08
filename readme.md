@@ -34,7 +34,7 @@ This tool fetches data about a package from the npm registry and compares its ne
 
 - `"latest"` if the new version is greater than the latest version on the registry.
 
-- `"maintenance"` if the new version is older than the latest version on the registry.
+- `"v{major}-maintenance"` if the new version is older than the latest version on the registry.
 
 ### Command line interface
 
