@@ -29,7 +29,7 @@ const registryData = {
 }
 
 describe('lib/getHighestVersion', () => {
-  it('returns the highest non-rerelease version', () => {
+  it('returns the highest stable (not pre-release) version', () => {
     const result = subject(registryData)
     assert.equal(result, '5.3.2')
   })

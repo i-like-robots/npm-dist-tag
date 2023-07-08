@@ -30,12 +30,11 @@ $ npm install --save-dev npm-dist-tag
 
 This tool fetches data about a package from the npm registry and compares its new version with those already published. By default the package name and new version will be loaded from `package.json` in the current working directory. The tool can be used via its command line interface or Node.js API and will return one of three values:
 
-  - `"latest"` if the new version is greater than the highest version on the registry.
+- `"next"` if the new version is greater than the latest version on the registry and has a pre-release identifier.
 
-  - `"maintenance"` if the new version is older than the highest version on the registry.
+- `"latest"` if the new version is greater than the latest version on the registry.
 
-  - `"pre-release"` if the new version has a pre-release identifier.
-
+- `"maintenance"` if the new version is older than the latest version on the registry.
 
 ### Command line interface
 

@@ -18,9 +18,9 @@ describe('lib/getDistTag', () => {
   })
 
   describe('with pre-release version', () => {
-    it('returns "pre-release" tag', () => {
-      const result = subject('1.0.0-beta.1', '2.0.0')
-      assert.equal(result, 'pre-release')
+    it('returns "next" tag', () => {
+      const result = subject('3.0.0-beta.1', '2.0.0')
+      assert.equal(result, 'next')
     })
   })
 })
