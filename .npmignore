@@ -4,3 +4,4 @@ test/
 .eslintignore
 .eslintrc.js
 .prettierrc.json
+publish.sh
