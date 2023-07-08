@@ -7,9 +7,12 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "lint": "prettier --config .prettierrc.json --list-different lib/*.js",
+    "test": "npm run verify && npm run spec",
     "spec": "jasmine 'tests/*.spec.js'",
-    "test": "npm run lint && npm run spec"
+    "lint": "eslint .",
+    "format": "prettier --write '**/*.{js,json,yml}'",
+    "verify": "npm run lint && npm run format",
+    "prepublishOnly": "npm run test"
   },
   "keywords": [
     "npm",
