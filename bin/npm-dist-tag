@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const mri = require('mri')
 const npmDistTag = require('../')
+const { parseArgs } = require('node:util')
 
 const help = `
 Usage: npm-dist-tag [options]
@@ -14,21 +14,25 @@ Options:
 
 const run = async () => {
   try {
-    const args = process.argv.slice(2)
-
-    const options = mri(args, {
-      alias: {
-        p: 'package',
-        v: 'version',
-        h: 'help'
+    const { values } = parseArgs({
+      options: {
+        package: {
+          type: 'string',
+          short: 'p',
+        },
+        version: {
+          type: 'string',
+          short: 'v',
+        },
+        help: {
+          type: 'boolean'
+        },
       },
-      unknown: (option) => {
-        const message = `Unknown option "${option}"`
-        throw Error([message, help].join('\n'))
-      }
     })
 
-    const result = options.help ? help : await npmDistTag(options)
+    console.log(values)
+
+    const result = values.help ? help : await npmDistTag(values)
 
     console.log(result)
     process.exit(0)
