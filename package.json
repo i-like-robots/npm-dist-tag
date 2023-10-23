@@ -6,6 +6,7 @@
     "npm-dist-tag": "bin/npm-dist-tag.js"
   },
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "npm run verify && npm run spec",
     "spec": "node --test --test-reporter spec",

@@ -10,7 +10,6 @@ A small tool to find the appropriate [npm distribution tag][1] when publishing a
 $ npx npm-dist-tag
 ```
 
-
 ## Installation
 
 This is a [Node.js] module available through the [npm] registry. Before installing, download and install Node.js. Node.js 18 or higher is required.
@@ -24,7 +23,6 @@ $ npm install --save-dev npm-dist-tag
 [Node.js]: https://nodejs.org/en/
 [npm]: https://www.npmjs.com/
 [npm install]: https://docs.npmjs.com/getting-started/installing-npm-packages-locally
-
 
 ## Usage
 
@@ -46,7 +44,6 @@ The package name and version can be provided to the tool as options:
 $ npx npm-dist-tag --package "<name>" --version "<semver>"
 ```
 
-
 ### Node interface
 
 This package provides one function which returns a promise. The promise will either resolve with the distribution tag when successful or reject with an error if it fails:
@@ -56,18 +53,17 @@ The `package` name and new `version` can be provided as options:
 ```js
 const npmDistTag = require('npm-dist-tag')
 
-npmDistTag({
-  package: '<name>',
-  version: '<semver>'
-})
-  .then((tag) => {
-    console.log(tag)
+try {
+  const tag = await npmDistTag({
+    package: '<name>',
+    version: '<semver>'
   })
-  .catch((error) => {
-    console.error(error)
-  })
-```
 
+  console.log(tag)
+} catch (error) {
+  console.error(error)
+}
+```
 
 ## Example
 
@@ -80,7 +76,6 @@ if [[ $DIST_TAG ]]; then
   npm publish --dist-tag=$DIST_TAG;
 fi
 ```
-
 
 ### License
 
